@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"),
+    url("~/assets/fonts/FiraSans-Regular.woff2") format("woff2"),
+    url("~/assets/fonts/FiraSans-Regular.woff") format("woff"),
+    url("~/assets/fonts/FiraSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans Bold"), local("Fira-Sans-Bold"),
+    url("~/assets/fonts/FiraSans-Bold.woff2") format("woff2"),
+    url("~/assets/fonts/FiraSans-Bold.woff") format("woff"),
+    url("~/assets/fonts/FiraSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AKONY";
+  src: local("AKONY"), local("AKONY"),
+    url("~/assets/fonts/AKONY.woff2") format("woff2"),
+    url("~/assets/fonts/AKONY.woff") format("woff"),
+    url("~/assets/fonts/AKONY.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+html,
+body {
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #101114;
+  color: white;
+  line-height: 1.6;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
