@@ -19,6 +19,12 @@ section {
   font-size: 1.5em;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 1024px) {
   .wrapper {
     width: 85%;
@@ -40,7 +46,7 @@ section {
     margin-top: 3rem;
   }
 
-  .title:not(.about_links .title) {
+  .title {
     margin-bottom: 1.5rem;
     text-align: center;
   }

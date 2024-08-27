@@ -4,5 +4,11 @@ export default defineNuxtConfig({
   pages: true,
   // devtools: { enabled: true },
   css: ['~/assets/styles/base.scss', '~/assets/styles/index.scss'],
-  spaLoadingTemplate: false
+  spaLoadingTemplate: false,
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  }
 })
