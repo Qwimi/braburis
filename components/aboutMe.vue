@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <section>
     <div class="wrapper">
@@ -58,8 +60,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 @mixin textMixin {

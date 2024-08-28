@@ -54,14 +54,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   body {
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 10px;
   }
 }

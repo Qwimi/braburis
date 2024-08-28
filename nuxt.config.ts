@@ -1,14 +1,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  // compatibilityDate: '2024-04-03',
   pages: true,
-  // devtools: { enabled: true },
   css: ['~/assets/styles/base.scss', '~/assets/styles/index.scss'],
   spaLoadingTemplate: false,
+
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     }
+  },
+
+  modules: [[
+    '@pinia/nuxt',
+    {
+      autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
+    }],
+    'nuxt-swiper'
+  ],
+
+  imports: {
+    dirs: ['stores']
   }
 })
