@@ -23,21 +23,17 @@ const { photoset } = defineProps<{ photoset: Photoset }>();
   <div class="swiper--container">
     <swiper
       @swiper="onSwiper"
-      :style="{
-        '--swiper-navigation-color': '#fff',
-        '--swiper-pagination-color': '#fff',
-      }"
       :loop="true"
       :thumbs="{ swiper: thumbsSwiper }"
       :modules="modules"
       class="swiper"
     >
       <swiper-slide
-        v-for="photo in photoset?.photos"
+        v-for="(photo, index) in photoset?.photos"
         :key="photo"
         class="swiper__slide"
       >
-        <img :src="photo" alt="не получилось загрузить фото" />
+        <ImageItem :picture="photo" :picture-small="photoset.thumbs[index]" />
       </swiper-slide>
     </swiper>
 
@@ -72,7 +68,7 @@ const { photoset } = defineProps<{ photoset: Photoset }>();
       :key="photo"
       class="swiper__slide swiper__slide--thumb"
     >
-      <img :src="photo" alt="не получилось загрузить фото" />
+      <img :src="photo" alt="не получилось загрузить фото" loading="lazy" />
     </swiper-slide>
   </swiper>
 </template>
@@ -109,6 +105,7 @@ const { photoset } = defineProps<{ photoset: Photoset }>();
 
 .swiper__button {
   position: absolute;
+  cursor: pointer;
   top: 0;
   bottom: 0;
   z-index: 1;

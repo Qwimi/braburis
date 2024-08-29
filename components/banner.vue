@@ -10,7 +10,7 @@
 <style lang="scss" scoped>
 .banner {
   position: relative;
-  background: url(../assets/banner.webp);
+  background: url(~/assets/banner.webp);
   background-size: cover;
   background-position: center center;
   text-align: center;
