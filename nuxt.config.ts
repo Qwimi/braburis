@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   ssr: true,
+  target: 'static',
+  router: {
+    base: '/braburis/'
+  },
   pages: true,
   css: ['~/assets/styles/base.scss', '~/assets/styles/index.scss'],
   spaLoadingTemplate: false,
