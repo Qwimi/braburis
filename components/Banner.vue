@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center center;
   text-align: center;
-  aspect-ratio: 16/9;
+  height: 100vh;
 }
 
 .title {

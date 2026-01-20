@@ -1,11 +1,19 @@
 <script setup lang="ts">
-import { useAppStore } from "~/stores/store";
+export interface Photoset {
+  id: number
+  name: string
+  photos: Array<string>
+  thumbs: Array<string>
+}
 
-const store = useAppStore();
+const { data } = await useAsyncData<Photoset[]>(
+  'photosets',
+  () => $fetch('/photosets.json')
+)
 </script>
 
 <template>
   <Banner />
   <AboutMe />
-  <SwiperList :photosets="store.carsPhotosets" />
+  <SwiperList v-if="data" :photosets="data" />
 </template>

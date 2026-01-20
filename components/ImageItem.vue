@@ -13,7 +13,7 @@ const loadingClass: Ref<string> = ref("");
     :style="{ backgroundImage: `url(${pictureSmall})` }"
     :class="loadingClass"
   >
-    <img
+    <NuxtImg
       :src="picture"
       alt="не удалось загрузить фото"
       class="picture"
